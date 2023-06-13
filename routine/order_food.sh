@@ -1,5 +1,9 @@
 #!/bin/bash
 #I am writing to order food based on the time I"m currently in"
+#
+
+time=$(date +%H)
+echo $time
 
 cmd="firefox "
 while getopts "l:q:" opt;
