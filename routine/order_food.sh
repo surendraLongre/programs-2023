@@ -29,7 +29,7 @@ done
 
 if [ $# -eq 0 ]; then
 
-	if [  "$time"  -lt  "29" ]; then
+	if [  "$time"  -lt  "19" ]; then
 		firefox "https://aromadhaba.com/search?query=${1:-paneer}"
 	else
 		firefox "https://h2canteen.com/search?query=${1:-paneer}"
