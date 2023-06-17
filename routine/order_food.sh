@@ -3,7 +3,6 @@
 #
 
 time=$(date +%H)
-echo $time
 
 cmd="firefox "
 while getopts "l:q:" opt;
