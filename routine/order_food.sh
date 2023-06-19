@@ -38,6 +38,6 @@ if [ $# -eq 0 ]; then
 
 fi
 
-firefox "https://$shop_name.com/search?query=$query"
+firefox "https://$shop_name.com/search?query=${query:-panner}"
 
 
