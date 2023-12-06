@@ -1,18 +1,26 @@
 #!/bin/bash
+#
+#write script for adding tasks
 
-file='data.txt'
-file_length=$(wc -l $file | awk '{print $1}')
-file_length=$((file_length))
+file='/home/kgpk/my_scripts/routine/data.txt'
 
-#get the position(top/bottom) to add the text
-read -p "Enter the task: " task
-read -p "Enter the progress: " progress
-read -p "Enter position(top/bottom): " position
+blue=$(tput bold)$(tput setaf 4)
+green=$(tput bold)$(tput setaf 2)
+red=$(tput bold)$(tput setaf 1)
+reset=$(tput sgr0)
 
-data=$(echo "${task}\t\t${progress}")
-
-if [ "$position" = "top" ]; then
-	sed -i "1i\\${data}" $file
+if [ $# -eq 2 ]; then
+	task=${1}
+	progress=$2
+	echo -n "${blue}(top/botttom/line_num): ${reset} "
+	read -p "" position
+	if [[ $position = 'top' ]]; then
+		sed -i "1i${task^^}\t\t$progress" $file
+	elif [[ $position = 'bottom' ]]; then
+		sed -i "\$a${task^^}\t\t$progress" $file
+	else
+		sed -i "$position i\\${task^^}\t\t$progress" $file
+	fi
 else
-	sed -i "\$a\\${data}" $file
+	echo "usage: $0 {task} {progress}"
 fi

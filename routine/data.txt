@@ -1,15 +1,6 @@
-STUDY_S1 		no
-STUDY_S2		no
-STUDY_S3		no
-STUDY_S4		no
-STUDY_S5		no
-STUDY_S6		no
-DRINK_WATER1 		no 				8:00
-DRINK_WATER2		no				12:00
-DRINK_WATER3		no				16:00
-DRINK_WATER4		no				20:00
-PLAY_BRAWLSTARS		no				13:30
-CHANGE_WAPP_DP		no				
-BRUSH_TEETH		no
-TAKE_BATH		no
-TALK_TO_GIRLS		no				
+CN101 		no
+CODE 		no
+BRUSH 		no
+BATH 		no
+GIRLY 		no
+GYM 		no
