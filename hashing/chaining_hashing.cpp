@@ -9,6 +9,7 @@ void insert(int);
 bool search(int);
 
 int main(){
+	//for the chaining hashing
 	for(int i=0; i!=10; i++){
 		hash[i]=new List;
 	}
@@ -24,6 +25,9 @@ int main(){
 	hash[0]->print();
 	std::cout<<search(100);
 	hash[2]->print();
+
+//for linear probing
+
 }
 
 void insert(int num){
